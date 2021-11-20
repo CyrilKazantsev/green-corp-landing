@@ -8,6 +8,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
   }
 .header__logo {
     height: 30px;
@@ -37,10 +41,21 @@ button {
 .about__image {
     width: 500px;
   }
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
    
 .about__sun—image {
     width: 100px;
     height: 100px;
+    animation: rotation 10s infinite linear;
+    position: absolute;
   }
 
 .about {
@@ -89,7 +104,6 @@ button {
   text-align: center;
   display: flex; 
   justify-content: center; 
-  align-items: center;
 }
 
 .form h1 {
@@ -116,31 +130,23 @@ button {
 .form label {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.form input {
+.form input, .form select {
   font-size: 18px;
   color: #213053;
   height: 60px;
   padding: 0 20px;
   border-radius: 15px;
   border: none;
+  outline: none;
 }
 
 .form__submit {
   font-size: 18px;
   font-weight: 600;
   margin-top: 40px;
-}
-
-.form select {
-  font-size: 18px;
-  color: #213053;
-  height: 60px;
-  padding: 0 20px;
-  border-radius: 15px;
-  border: none;
 }
 
 select {
@@ -154,10 +160,13 @@ input {
 button:hover {
   background-color: #f6980c;
   box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
+  transition: background-color 0.3s ease-in;
 }
 
 footer {
   padding: 90px 20px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .footer__container {
@@ -175,7 +184,7 @@ footer {
   margin-right: 80px;
 }
 
-.footer__group h3 {
+.footer h3 {
   font-size: 16px;
   opacity: 0.7;
   margin-bottom: 30px;
