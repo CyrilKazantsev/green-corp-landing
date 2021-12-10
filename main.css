@@ -363,6 +363,9 @@ footer {
 }
 
 @media (max-width: 720px) {
+  html, body {
+    overflow-x: hidden;
+  }
   header a {
     margin-right: 20px;
   }
