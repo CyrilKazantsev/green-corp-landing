@@ -67,6 +67,7 @@ button {
     background: url('img/back.png') no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative
   }
 
 .about h1 {
@@ -362,6 +363,13 @@ footer {
   margin-left: 5px;
 }
 
+.orb-canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
 @media (max-width: 720px) {
   html, body {
     overflow-x: hidden;
@@ -418,7 +426,7 @@ footer {
   }
   .features__feedback-right {
     flex-direction: column;
-    align-items: initial;
+    align-items: center;
   }
   .features__savings-box {
     margin-bottom: 30px;
